@@ -33,7 +33,7 @@ def create_store():
 	return jsonify(new_store)
 
 # GET /store/<string:name>
-@app.route('/store/<string:name>')
+@app.route('/store/<string:name>') # 'http://127.0.0.1:5000/store/some_name'
 def get_store(name):
 	for store in stores:
 		if store['name'] == name:
